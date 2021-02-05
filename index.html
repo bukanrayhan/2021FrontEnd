@@ -5,13 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The 2021 FrontEnd Developer Carsh Course</title>
+        <link rel="stylesheet" href="css/main.css">
     </head>
 
     <body>
 
         <div class="navbar">
             <div class="container">
-                <a href="index.html">Remember<span>That</span></a>
+                <a class="logo" href="#">Remember<span>That</span></a>
 
                 <img id="mobile-cta" class="mobile-menu" src="images/burger.svg" alt="burger-menu">
                 
@@ -41,7 +42,9 @@
 
                     <div class="hero-cta">
                         <a href="#" class="primary-cta">Try for free</a>
-                        <a href="#" class="watch-video-cta">🎥 Watch video</a>
+                        <a href="#" class="watch-video-cta">
+                            <img src="images/watch.svg" alt="camera"> 
+                            Watch video</a>
                     </div>
                 </div>
 
@@ -105,8 +108,14 @@
                         
                         <label for="message">Message</label>
                         <textarea name="message" for="message" id="message" cols="30" rows="10"></textarea>
+
+                        <input type="submit" value="Send Message" class="send-message-cta">
                     </form>
 
+                </div>
+
+                <div class="map-right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.738290529032!2d107.6048254153439!3d-6.92185709499877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e89dbe0ec231%3A0x177412aac90cd065!2sAlun-Alun%20Kota%20Bandung!5e0!3m2!1sid!2sid!4v1612518363558!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
 
             </div>
