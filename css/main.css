@@ -99,4 +99,93 @@ section {
   width: 70%;
   margin-top: 3em;
 }
+
+section.features-section {
+  background: #20272e;
+  color: var(--bgColor1);
+}
+
+ul.features-list {
+  margin: 0;
+  margin-left: .1em;
+}
+
+ul.features-list li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+}
+
+ul.features-list li:before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/bullet.svg");
+  background-size: contain;
+  margin-right: .5em;
+}
+
+.features-section img {
+  display: none;
+}
+
+.testimonials-section {
+  background: var(--primaryColor);
+  color: var(--bgColor1);
+}
+
+.testimonials-section li {
+  background: #006bd6;
+  text-align: center;
+  padding: 2em 1em;
+  margin: 0 auto 5em auto;
+  border-radius: 1em;
+  width: 80%;
+}
+
+.testimonials-section li img {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  border: 8px solid #006bd6;
+  margin-top: -4.5em;
+}
+
+.contact-section h2 {
+  font-size: 2em;
+}
+
+.contact-section label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+
+.contact-section input, .contact-section textarea {
+  width: 100%;
+  padding: .8em;
+  margin-bottom: 1em;
+  border-radius: .3em;
+  border: 1px solid #c7c7c7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input.send-message-cta {
+  background-color: var(--primaryColor);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5em;
+  margin-top: .5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: .8em 2em;
+  width: unset;
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */
