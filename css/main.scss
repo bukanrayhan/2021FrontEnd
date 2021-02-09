@@ -7,13 +7,13 @@
 }
 
 body{
-    background: var(--bgColor2);
+    background: var(--bgColor1);
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
 .navbar{
-    background: var(--bgColor2);
+    background: var(--bgColor1);
     padding: 1em;
 
     .logo {
@@ -54,7 +54,7 @@ ul {
 
 section {
     padding: 5em 2em;
-    background: var(--bgColor2);
+    background: var(--bgColor1);
 }
 
 .hero {
@@ -258,8 +258,12 @@ nav {
         display: none;
     }
 
+    section {
+        background: var(--bgColor2);
+    }
+
     .navbar {
-        background: var(--bgColor1);
+        // background: var(--bgColor1);
 
         .container {
             display: grid;
@@ -374,5 +378,9 @@ nav {
 
     .features-section img {
         display: block;
+        position: absolute;
+        right: 0;
+        width: 350px;
+        bottom: -2em;
     }
 }

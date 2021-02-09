@@ -7,13 +7,13 @@
 }
 
 body {
-  background: var(--bgColor2);
+  background: var(--bgColor1);
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
-  background: var(--bgColor2);
+  background: var(--bgColor1);
   padding: 1em;
 }
 
@@ -55,7 +55,7 @@ ul {
 
 section {
   padding: 5em 2em;
-  background: var(--bgColor2);
+  background: var(--bgColor1);
 }
 
 .hero {
@@ -239,8 +239,8 @@ nav li:hover {
   .mobile-menu, .mobile-menu-exit {
     display: none;
   }
-  .navbar {
-    background: var(--bgColor1);
+  section {
+    background: var(--bgColor2);
   }
   .navbar .container {
     display: -ms-grid;
@@ -346,6 +346,10 @@ nav li:hover {
   }
   .features-section img {
     display: block;
+    position: absolute;
+    right: 0;
+    width: 350px;
+    bottom: -2em;
   }
 }
 /*# sourceMappingURL=main.css.map */
