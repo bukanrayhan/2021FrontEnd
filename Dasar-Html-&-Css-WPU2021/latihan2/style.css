@@ -1,0 +1,75 @@
+body {
+    background-color: #999;
+    /* background-image: url(../../DesignCourse2021/images/holding-phone.jpg);
+    background-repeat: unset; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: 100px;
+    color: white;
+}
+
+h1.hmm {
+    font-family: Helvetica, sans-serif;
+    font-variant: small-caps;
+    font-style: oblique;
+    text-decoration: overline;
+    font-size: 70px;
+    /* font-weight: bolder; */
+}
+
+p {
+    color: white;
+    font-size: large;
+    text-indent: 2em;
+    text-align: justify;
+    text-transform: initial;
+    letter-spacing: .05em;
+    word-spacing: .2em;
+}
+
+ul, li {
+    margin: auto;
+    padding: auto;
+}
+
+a.hmm {
+    color: tomato;
+}
+
+.hmm:link {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.hmm:hover {
+    /* font-size: 2.1em; */
+    font-weight: bold;
+    font-variant: small-caps;
+    color: thistle;
+}
+
+.hmm:active{
+    text-decoration: underline;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a.hmm:visited {
+    color: pink;
+    font-weight: bold;
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+ul li:nth-child(even) a, ol li:nth-child(even) a{
+    color: white;
+}
+
+ol a, ul a{
+    color: wheat;
+}
