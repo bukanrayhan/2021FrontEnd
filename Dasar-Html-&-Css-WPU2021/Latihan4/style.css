@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.satu {
+    overflow: auto;
+    /* letter-spacing: 1px;
+    line-height: 1.5em;
+    word-spacing: 1px; */
+    width: 350px;
+    max-height: 400px;
+    margin: 100px auto;
+    text-align: center;
+    right: 0;
+}
+
+p {
+    padding: .4em .8em;
+    right: 0;
+    display: inline-block;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.siji, .dua, .tiga {
+    display: inline-block;
+    background-color: lawngreen;
+}
