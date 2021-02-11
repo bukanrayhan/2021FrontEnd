@@ -1,0 +1,12 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container .main img {
+  width: 250px;
+  height: 250px;
+  float: left;
+  margin: 1px;
+}
+/*# sourceMappingURL=style.css.map */
