@@ -10,17 +10,19 @@ body {
     width: 350px;
     max-height: 400px;
     margin: 100px auto;
-    text-align: center;
+    text-align: justify;
     right: 0;
+    padding: .8em;
+    /* background-color: thistle; */
+    box-sizing: border-box;
+    border: .5px solid rgb(180, 180, 180);
+    border-radius: .4em;
 }
 
 p {
-    padding: .4em .8em;
     right: 0;
     display: inline-block;
-    width: 90%;
-    height: 90%;
-    text-align: center;
+    text-align: justify;
     display: inline-block;
     margin: 0;
     padding: 0;
