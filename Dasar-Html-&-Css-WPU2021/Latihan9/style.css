@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 60%;
+  margin: 100px auto 0 auto;
+}
+
+.container p {
+  text-align: justify;
+}
+
+.login {
+  position: absolute;
+  background-color: black;
+  opacity: .7;
+  left: 10%;
+  right: 10%;
+  top: 10%;
+  bottom: 10%;
+}
+/*# sourceMappingURL=style.css.map */
