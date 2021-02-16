@@ -1,0 +1,49 @@
+body {
+    background-image: url(../../DesignCourse2021/images/holding-phone.jpg);
+}
+
+.parent {
+    margin: 50px auto;
+    width: 500px;
+}
+
+.profile-picture {
+    width: 400px;
+    height: 400px;
+    background-color: salmon;
+    border-radius: 200px;
+    background-size: cover;
+    margin-bottom: 40px;
+    background-image: url(../../DesignCourse2021/images/person.jpg);
+}
+
+.shape {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.5);;
+    // opacity: 80%;
+    position: relative;
+    
+    .shape2 {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(115, 216, 115);
+        position: absolute;
+        right: -40px;
+        bottom: -40px;
+        opacity: unset;
+        opacity: 80%;
+        
+    }
+}
+.shape2 {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    // position: absolute;
+    // right: -40px;
+    // bottom: -40px;
+    // opacity: 100%;
+    // opacity: 80%;
+    
+}
