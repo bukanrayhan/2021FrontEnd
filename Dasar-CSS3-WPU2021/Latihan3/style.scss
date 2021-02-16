@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.shape {
+    margin: 100px auto;
+    width: 500px;
+    height: 700px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 8px 8px 18px #a7a7a769,
+                inset -4px -4px 20px lightgrey;
+    border-radius: 14px;
+    border: .5px rgba(202, 202, 202, 0.562) solid,;
+    padding: 80px;
+    box-sizing: border-box;
+
+    .prof-pic {
+        width: 154px;
+        height: 154px;
+        background-color: salmon;
+        background-image: url(../../DesignCourse2021/images/person.jpg);
+        background-size: cover;
+        border-radius: 50%;
+        margin: auto;
+        border: 2px rgb(233, 233, 233) solid;
+        box-shadow: 1.5px 1.5px 10px lightgrey;
+        // margin-top: 50px;
+    }
+}
