@@ -32,3 +32,12 @@ div{
         filter: blur(10px);
     }
 }
+
+.p {
+    transition: 5s;
+    
+    &:hover {
+        cursor: pointer;
+        transform: translateX(9999px);
+    }
+}
