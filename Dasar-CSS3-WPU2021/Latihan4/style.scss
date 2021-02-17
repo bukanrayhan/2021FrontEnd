@@ -34,10 +34,13 @@ div{
 }
 
 .p {
-    transition: 5s;
+    p{
+
+        transition: 5s;
+    }
     
-    &:hover {
+    &:hover p{
         cursor: pointer;
-        transform: translateX(9999px);
+        transform: translateX(9999px) rotate(360deg);
     }
 }

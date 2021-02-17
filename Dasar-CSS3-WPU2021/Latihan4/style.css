@@ -33,14 +33,14 @@ div img {
           filter: blur(10px);
 }
 
-.p {
+.p p {
   -webkit-transition: 5s;
   transition: 5s;
 }
 
-.p:hover {
+.p:hover p {
   cursor: pointer;
-  -webkit-transform: translateX(9999px);
-          transform: translateX(9999px);
+  -webkit-transform: translateX(9999px) rotate(360deg);
+          transform: translateX(9999px) rotate(360deg);
 }
 /*# sourceMappingURL=style.css.map */
