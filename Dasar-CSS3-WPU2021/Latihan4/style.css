@@ -22,4 +22,14 @@
   height: 403px;
   margin: 50px auto;
 }
+
+div {
+  margin: 50px auto;
+}
+
+div img {
+  margin: auto;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
 /*# sourceMappingURL=style.css.map */

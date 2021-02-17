@@ -24,3 +24,11 @@
     height: 403px;
     margin: 50px auto;
 }
+
+div{
+    margin: 50px auto;
+    img {
+        margin: auto;
+        filter: blur(10px);
+    }
+}
