@@ -1,0 +1,25 @@
+.shape0 {
+  width: 734px;
+  height: 403px;
+  margin: 50px auto;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#d77575), color-stop(62.67%, rgba(194, 47, 47, 0.37325)), to(rgba(203, 64, 64, 0.0556673)));
+  background-image: linear-gradient(to bottom right, #d77575 0%, rgba(194, 47, 47, 0.37325) 62.67%, rgba(203, 64, 64, 0.0556673) 100%);
+  border-radius: 10px;
+  /* background-color: saddlebrown; */
+}
+
+.shape1 {
+  width: 734px;
+  height: 403px;
+  background: radial-gradient(ellipse farthest-side at 50% 50%, #D77575 0%, rgba(194, 47, 47, 0.37325) 61.52%, rgba(203, 64, 64, 0.0556673) 100%);
+  border-radius: 20px;
+  margin: 50px auto;
+}
+
+.shape2 {
+  background-image: url(img/Rectangle1.png);
+  width: 734px;
+  height: 403px;
+  margin: 50px auto;
+}
+/*# sourceMappingURL=style.css.map */
