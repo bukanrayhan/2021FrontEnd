@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primaryColor: #F3C552;
+  --secondaryColor: #DAA520;
+  --tertiaryColor: #F9BDBD;
+  --textColor1: #3E3F43;
+  --bgColor1: #fff;
+}
+
+body {
+  background: var(--bgColor1);
+  margin: 0;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 1180px;
+  margin: auto;
+  background-color: var(--bgColor1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.navbar {
+  background-color: var(--bgColor1);
+}
+
+.navbar .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 192px auto;
+      grid-template-columns: 192px auto;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--textColor1);
+}
+
+.navbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: none;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  position: unset;
+}
+
+.navbar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.navbar nav ul a {
+  color: black;
+  font-size: 1em;
+  padding: .1em 1em;
+}
+
+.navbar nav ul.primary-nav {
+  margin: 0;
+}
+
+.navbar nav li.current {
+  font-weight: bold;
+}
+
+.navbar nav li.go-premium-cta a {
+  color: var(--primaryColor);
+  border: 3px solid var(--primaryColor);
+  border-radius: 5em;
+  font-weight: bold;
+  margin-top: -.2em;
+}
+
+.navbar nav li.go-premium-cta a:hover {
+  background: var(--primaryColor);
+  color: var(--bgColor1);
+}
+/*# sourceMappingURL=style.css.map */
