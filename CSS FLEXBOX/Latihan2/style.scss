@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(255, 155, 144);
+    justify-content: space-around;
+    // padding: 20px 0;
+    color: rgb(255, 241, 240);
+    height: 70px;
+    align-items: center;
+
+    .name {
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        width: 40%;
+        justify-content: space-between;
+
+        li {
+
+            a {
+                text-decoration: none;
+                color: rgb(255, 241, 240);
+                // font-size: 1em;
+
+                &:hover {
+                    font-weight: 650;
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+    
+    .menu-toggle {
+        position: relative;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+
+        input[type='checkbox'] {
+            position: absolute;
+            width: 40px;
+            height: 30px;
+            opacity: 0;
+            left: -5px;
+            top: -3.4px;
+            cursor: pointer;
+            z-index: 2;
+            
+            &:checked {
+                left: -9px;
+                width: 40px;
+                width: 40px;
+            }
+            
+            &:checked ~ span:nth-child(2){
+                transform: rotate(42deg);
+            }
+            
+            &:checked ~ span:nth-child(3){
+                transform: scale(0);
+                opacity: 0;
+            }
+            
+            &:checked ~ span:last-child{
+                transform: rotate(-46deg);
+            }
+        }
+        
+        span{
+            position: block;
+            height: 3px;
+            width: 30px;
+            background-color: rgb(255, 241, 240);
+            border-radius: 3px;
+            transition: all .5s;
+            
+            &:nth-child(2) {
+                transform-origin: 0 0;
+            }
+
+            &:last-child {
+                transform-origin: 0 0;
+            }
+        }
+    }
+}
+
+
+// responsive breakpoints
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav {
+        
+        ul {
+            position: absolute;
+            flex-direction: column;
+            background-color: rgb(255, 155, 144);
+            top: 0;
+            right: 0;
+            height: 100vh;
+            justify-content: space-evenly;
+            width: 70%;
+            align-items: center;
+            z-index: -1;
+            transform: translateX(100%);
+            transition: all .5s;
+            opacity: 0;
+        }
+
+        ul.slide {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .menu-toggle {
+            display: flex;
+        }
+    }
+}
