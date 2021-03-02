@@ -193,29 +193,29 @@ section {
                         }
                     }
 
-                    input, textarea {
+                    // input, textarea {
 
-                        &:required:empty {
-                            border: none;
-                            outline: none;
-                            border-bottom: 1px solid #777;
+                    //     &:required:empty {
+                    //         border: none;
+                    //         outline: none;
+                    //         border-bottom: 1px solid #777;
                             
-                        }
+                    //     }
                         
-                        &:required:visited:empty:invalid, &:-moz-ui-invalid {
-                            border:0;
-                            outline:none;
-                            box-shadow:none;
-                            -moz-box-shadow:none;
-                            -webkit-box-shadow:none;
-                        }
+                    //     &:required:visited:empty:invalid, &:-moz-ui-invalid {
+                    //         border:0;
+                    //         outline:none;
+                    //         box-shadow:none;
+                    //         -moz-box-shadow:none;
+                    //         -webkit-box-shadow:none;
+                    //     }
                         
-                        // &:required:invalid:visited:empty, &:required:-moz-ui-invalid:visited:empty{
-                        //     border: none;
-                        //     outline: none;
-                        //     border-bottom: 1px solid red;
-                        // }
-                    }
+                    //     // &:required:invalid:visited:empty, &:required:-moz-ui-invalid:visited:empty{
+                    //     //     border: none;
+                    //     //     outline: none;
+                    //     //     border-bottom: 1px solid red;
+                    //     // }
+                    // }
                 }
             }
         }
@@ -224,3 +224,19 @@ section {
 
 // now, the responsive
 
+
+@media screen and (max-width: 1200px) {
+
+    .container {
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+        min-width: auto !important;
+
+        .contactInfo {
+            top: 0 ;
+            height: 90%;
+        }
+    }
+
+}

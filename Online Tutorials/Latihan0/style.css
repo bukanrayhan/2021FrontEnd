@@ -221,17 +221,16 @@ section .container .contactForm .formBox .inputBox input[type='submit']:hover {
   background: #0d948b;
 }
 
-section .container .contactForm .formBox .inputBox input:required:empty, section .container .contactForm .formBox .inputBox textarea:required:empty {
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #777;
-}
-
-section .container .contactForm .formBox .inputBox input:required:visited:empty:invalid, section .container .contactForm .formBox .inputBox input:-moz-ui-invalid, section .container .contactForm .formBox .inputBox textarea:required:visited:empty:invalid, section .container .contactForm .formBox .inputBox textarea:-moz-ui-invalid {
-  border: 0;
-  outline: none;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+    min-width: auto !important;
+  }
+  .container .contactInfo {
+    top: 0;
+    height: 90%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
