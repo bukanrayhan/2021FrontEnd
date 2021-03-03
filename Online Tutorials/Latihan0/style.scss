@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
@@ -225,17 +228,26 @@ section {
 // now, the responsive
 
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
 
     .container {
         width: 90%;
         min-width: auto;
         margin: 20px;
-        min-width: auto !important;
+        min-width: auto ;
 
         .contactInfo {
             top: 0 ;
-            height: 90%;
+            height: 500px ;
+            position: relative;
+            box-shadow: none;
+        }
+
+        .contactForm {
+            position: relative ;
+            width: calc(100% - 350px) ;
+            padding-left: 250px ;
+            margin-left: 150px ;
         }
     }
 

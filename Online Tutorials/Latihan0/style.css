@@ -4,6 +4,9 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
@@ -221,16 +224,25 @@ section .container .contactForm .formBox .inputBox input[type='submit']:hover {
   background: #0d948b;
 }
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .container {
     width: 90%;
     min-width: auto;
     margin: 20px;
-    min-width: auto !important;
+    min-width: auto;
   }
   .container .contactInfo {
     top: 0;
-    height: 90%;
+    height: 500px;
+    position: relative;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .container .contactForm {
+    position: relative;
+    width: calc(100% - 350px);
+    padding-left: 250px;
+    margin-left: 150px;
   }
 }
 /*# sourceMappingURL=style.css.map */
