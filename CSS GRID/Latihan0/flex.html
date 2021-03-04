@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX</title>
+
+    <style>
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .container {
+            width: 600px;
+            margin: 50px auto;
+            border: 5px solid #333;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+        .container .header{
+            height: 80px;
+            width: auto;
+            background-color: tomato;
+            line-height: 80px;
+        }
+
+        .container .content{
+            display: flex;
+            height: 500px;
+            width: auto;
+            flex: 1;
+        }
+
+        .container .content .content-left {
+            height: 100%;
+            width: 30%;
+            /* background-color: aquamarine; */
+        }
+
+        .container .content .content-left .aside{
+            height: 50%;
+            width: auto;
+            background-color: cornflowerblue;
+            line-height: 100px;
+        }
+
+        .container .content .content-left .nav{
+            height: 50%;
+            width: auto;
+            background-color: coral;
+            line-height: 100px;
+        }
+
+        .container .content .content-right {
+            display: flex;
+            flex: 1.5;
+            height: auto;
+            width: 100%;
+            background-color: cadetblue;
+            align-items: center;
+        }
+
+        .container .content .content-right .main {
+            height: auto;
+            width: 100%;
+            background-color: cadetblue;
+            align-items: center;
+        }
+
+        .container .footer{
+            height: 80px;
+            width: auto;
+            background-color: black;
+            line-height: 80px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">Header</header>
+        <div class="content">
+            <div class="content-left">
+                <div class="aside">Aside</div>
+                <div class="nav">Nav</div>
+            </div>
+            <div class="content-right">
+                <div class="main">Main</div>
+            </div>
+        </div>
+        <footer class="footer">Footer</footer>
+    </div>
+    
+</body>
+</html>
