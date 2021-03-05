@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-Content</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            height: 500px;
+            margin: 50px auto;
+            display: grid;
+            background-color: lightcoral;
+            grid-template-rows: repeat(3, 130px);
+            grid-template-columns: 130px 180px 130px;
+            gap: 5px;
+            /* justify-items: start; */
+            /* justify-items: end; */
+            /* justify-items: center; */
+            /* justify-items: stretch; */
+
+            /* align-items: stretch; */
+            /* align-items: start; */
+            /* align-items: end; */
+            /* align-items: center; */
+
+            place-items: center;
+
+            justify-content: space-around;
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+
+            /* align-content: start; */
+            /* align-content: end; */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+            align-content: space-evenly;
+        }
+
+        .items {
+            border: 3px solid black;
+            width: 100px;
+            height: 80px;
+            background-color: lightblue;
+        }
+
+        /* .i1, .i4, .i7 {
+            height: 50px;
+        }
+
+        .i2, .i5, .i8 {
+            height: 80px;
+        }
+
+        .i3, .i6, .i9 {
+            height: 100px;
+        } */
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="items i1">1</div>
+        <div class="items i2">2</div>
+        <div class="items i3">3</div>
+        <div class="items i4">4</div>
+        <div class="items i5">5</div>
+        <div class="items i6">6</div>
+        <div class="items i7">7</div>
+        <div class="items i8">8</div>
+        <div class="items i9">9</div>
+    </div>
+
+</body>
+</html>
