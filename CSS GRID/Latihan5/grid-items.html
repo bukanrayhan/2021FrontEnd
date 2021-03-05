@@ -32,7 +32,7 @@
             /* align-items: end; */
             /* align-items: center; */
 
-            place-items: center;
+            place-items: stretch;
 
             /* justify-content: space-around; */
             /* justify-content: space-between; */
@@ -44,15 +44,22 @@
             /* align-content: space-between; */
             /* align-content: space-evenly; */
             place-content: space-between center;
-            place-content: center space-between;
+            place-content: center space-around;
         }
 
         .items {
             border: 3px solid black;
-            width: 100px;
-            height: 80px;
+            /* width: 100px;
+            height: 80px; */
             background-color: lightblue;
             /* place-self: center; */
+        }
+
+        .items.i1 {
+            /* justify-self: start; */
+            /* align-self: start; */
+            /* place-self: end; */
+            grid-area: 2 / 1 / 4 / span 3;
         }
 
         /* .i1, .i4, .i7 {
