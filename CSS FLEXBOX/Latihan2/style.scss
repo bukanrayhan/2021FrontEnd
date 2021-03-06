@@ -114,6 +114,10 @@ nav {
 @media screen and (max-width: 576px) {
     nav {
         
+        .menu-toggle {
+            display: flex;
+        }
+        
         ul {
             position: absolute;
             flex-direction: column;
@@ -133,10 +137,6 @@ nav {
         ul.slide {
             opacity: 1;
             transform: translateX(0);
-        }
-
-        .menu-toggle {
-            display: flex;
         }
     }
 }
