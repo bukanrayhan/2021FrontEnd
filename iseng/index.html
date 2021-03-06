@@ -27,7 +27,7 @@
         .col {
             background-color: darkgrey;
             border-radius: 12px;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
 
         .left {
@@ -36,6 +36,7 @@
         }
 
         .mid {
+            position: relative;
             display: grid;
             grid-template-areas: 
                 'hero hero'
@@ -76,7 +77,19 @@
         }
 
         .card.card-2 {
+            width: 100%;
+            position: absolute;
             grid-area: card-2;
+            background-color: black;
+            z-index: 999;
+            /* top: 200px; */
+            /* transform-origin: center; */
+            transition: .2s;
+        }
+
+        .card.card-2:hover {
+            border-radius: 12px;
+            transform: scale(1.02);
         }
 
         .right {
