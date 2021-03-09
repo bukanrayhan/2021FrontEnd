@@ -48,10 +48,9 @@ body {
 }
 
 .container .navigation ul li {
-  padding: 16px 8px;
   position: relative;
   list-style: none;
-  width: 100%;
+  width: auto;
   cursor: pointer;
 }
 
@@ -60,10 +59,12 @@ body {
 }
 
 .container .navigation ul li a {
+  padding: 16px 8px;
   position: relative;
   display: block;
   text-decoration: none;
   width: 100%;
+  height: 100%;
   display: -ms-grid;
   display: grid;
   color: #6843d1;
@@ -86,24 +87,33 @@ body {
 
 .container .navigation ul li a .title {
   position: relative;
-  display: block;
   white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: .8s;
+  transition: .8s;
 }
 
 .container .navigation.active {
-  width: 300px;
+  width: 350px;
+}
+
+.container .navigation.active ul li a .title {
+  display: block;
+  opacity: 1;
 }
 
 .container .toggle {
   position: absolute;
   top: calc(50% - 20px);
   right: -20px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background-color: #f5f5f5;
   cursor: pointer;
   border-radius: 50%;
-  border: 4px solid #6843d1;
+  border: 6px solid #6843d1;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .container .toggle::before {
