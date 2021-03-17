@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', Helvetica, sans-serif;
+    // font-size: 18px;
+}
+
+
+$fontColor1: #272042;
+$fontColor2: #8B8BA5;
+$primaryColor: #F7C531;
+$secondaryColor: #FBE0DC;
+$tertiaryColor: #D8CBF6;
+$quaternaryColor: #FDFAE5;
+
+@mixin btn ($bacol:$primaryColor, $fontSize:1.1em){
+    position: relative;
+    color: $fontColor1;
+    font-size: $fontSize;
+    background-color: $bacol;
+    padding: .8em 2em;
+    border-radius: 1.7em 1.7em 15px 15px;
+    font-weight: 500;
+    // max-height: 50px;
+}
+
+@mixin textHighlight ($word: '', $height:.25em, $bottom: .1em){
+    content: $word;
+    position: absolute;
+    width: 100%;
+    display: block;
+    bottom: $bottom;
+    background-color: $secondaryColor;
+    height: $height;
+    border-radius: 100px;
+    z-index: -1;
+    color: $fontColor1;
+}
+
+// @mixin textHighlight ($word:'',$height:.5em){
+//     content: $word;
+//     position: absolute;
+//     width: 100%;
+//     display: block;
+//     bottom: .1em;
+//     background-color: $secondaryColor;
+//     height: $height;
+//     border-radius: 100px;
+//     z-index: -1;
+// }
+
+a {
+    text-decoration: none;
+    color: $fontColor2;
+}
+
+.active, .cta {
+    color: $fontColor1;
+    font-weight: 500;
+}
+
+.container {
+    display: grid;
+    max-width: 1440px;
+    padding: 2.4em 100px 0 100px;
+    margin: 0 auto;
+    // background-color: #ddd;
+    gap: 100px;
+    align-items: center;
+    align-content: center;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        max-height: 50px;
+        align-items: center;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8em;
+            font-weight: 500;
+
+            img {
+                max-width: 1.8em;
+                max-height: 1.8em;
+                margin-right: 10px;
+            }
+        }
+
+        .menu {
+            display: grid;
+            grid-auto-flow: column;
+            list-style: none;
+            align-items: center;
+            gap: 2em;
+
+            a{
+                display: block;
+                position: relative;
+
+                &.active::after {
+                    @include textHighlight('',.25em);
+                }
+            }
+            
+            .cta {
+                @include btn($secondaryColor)
+            }
+        }
+    }
+
+    .hero {
+        display: grid;
+        position: relative;
+        justify-content: space-evenly;
+        place-items: center;
+        grid-auto-flow: column;
+        gap: 100px;
+        grid-auto-columns: minmax(auto, 424px) minmax(auto, 628px);
+        .txtBx {
+            display: flex;
+            position: relative;
+            // max-width: 424px;
+            flex-direction: column;
+            // justify-content: flex-start;
+            align-items: flex-start;
+
+            h1 {
+                display: inline-block;
+                position: relative;
+                margin-bottom: 10px;
+                font-weight: 700;
+                font-size: 2.8em;
+                line-height: 70px;
+
+                span {
+                    display: inline-block;
+                    position: relative;
+
+                    &::before {
+                        @include textHighlight('', .25em, .29em);
+                    }
+                    
+                }
+            }
+
+            p {
+                display: inline-block;
+                margin-bottom: 40px;
+                color: $fontColor2;
+                font-size: 1.25em;
+                line-height: 34px;
+            }
+
+            .btn {
+                @include btn($primaryColor, 1.1em)
+            }
+        }
+
+        .vidBx {
+            position: relative;
+            place-self: center;
+
+            .frame {
+                // overflow: hidden;
+                // background-color: $fontColor2;
+                position: relative;
+                max-width: 580px;
+                height: 390px;
+                border-radius: 20% 20% 78% 78% / 20% 20% 48% 48% ;
+                overflow: hidden;
+                // clip: ;
+                
+                img.img {
+                    width: 100%;
+                    background-size: cover;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 580px;
+                height: 340px;
+                background-color: $quaternaryColor;
+                border-radius: 20% 20% 78% 78% / 20% 20% 48% 48% ;
+                top: -10px;
+                left: -10px;
+                z-index: -1;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 580px;
+                height: 340px;
+                background-color: $tertiaryColor;
+                border-radius: 20% 20% 78% 78% / 20% 20% 48% 48% ;
+                bottom: -8px;
+                right: -8px;
+                z-index: -1;
+            }
+
+            .btn.play {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                background-color: $secondaryColor;
+                border-radius: 50%;
+            }
+
+            // .img {
+            //     width: 100%;
+            //     background-image: url('img/backImg.png');
+            //     overflow: hidden;
+            // }
+            
+
+        }
+
+    }
+}
