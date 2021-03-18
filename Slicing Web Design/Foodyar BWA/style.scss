@@ -124,6 +124,8 @@ a {
         grid-auto-flow: column;
         gap: 100px;
         grid-auto-columns: minmax(auto, 424px) minmax(auto, 628px);
+        // grid-auto-rows: minmax(auto, 400px);
+
         .txtBx {
             display: flex;
             position: relative;
@@ -165,68 +167,124 @@ a {
         }
 
         .vidBx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
             place-self: center;
+            width: 96%;
+            // max-width: 100%;
+            height: 400px;
+            min-height: 340px;
+            height: 100%;
+            height: 108%;
+            background-color: #ddd;
+            // background-image: url('img/vid.png');
+            background-position: center;
+            background-size: cover;
+            border-radius: 10% 10% 20% 20% / 15% 15% 85% 85%;
+            border-radius: 90px;
+            border-bottom-left-radius: 128px;
+            border-bottom-right-radius: 128px;
+            // overflow: hidden;
 
             .frame {
-                // overflow: hidden;
-                // background-color: $fontColor2;
-                position: relative;
-                max-width: 580px;
-                height: 390px;
-                border-radius: 20% 20% 78% 78% / 20% 20% 48% 48% ;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                background-color: #ddd;
+                border-radius: inherit;
                 overflow: hidden;
-                // clip: ;
                 
-                img.img {
+                .img {
                     width: 100%;
+                    background-position: center;
                     background-size: cover;
+                    cursor: pointer;
+                    transition: .25s;
+                }
+
+                .btn.play {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    background-color: $secondaryColor;
+                    border: 4px solid $secondaryColor;
+                    border-radius: 50%;
+                    top: calc(50% - 50px);
+                    right: calc(50% - 36px);
+                    cursor: pointer;
+                    z-index: 2;
+                    opacity: .6;
+                    transition: .25s;
+                }
+
+                &:hover {
+                    
+                    .img {
+                        // filter: grayscale(.35);
+                        opacity: .9;
+                    }
+
+                    .btn.play {
+                        opacity: 1;
+                        background-color: $secondaryColor;
+                    }
                 }
             }
 
+
+            
             &::before {
                 position: absolute;
                 content: '';
-                width: 580px;
-                height: 340px;
+                z-index: 2;
+                width: inherit;
+                height: 88%;
                 background-color: $quaternaryColor;
-                border-radius: 20% 20% 78% 78% / 20% 20% 48% 48% ;
-                top: -10px;
-                left: -10px;
+                border-radius: 10% 10% 20% 20% / 15% 15% 85% 85%;
+                border-top-left-radius: 90px;
+                border-top-right-radius: 90px;
+                top: -14px;
+                left: -14px;
                 z-index: -1;
             }
-
+            
             &::after {
                 position: absolute;
                 content: '';
-                width: 580px;
-                height: 340px;
+                z-index: 2;
+                width: inherit;
+                height: 88%;
                 background-color: $tertiaryColor;
-                border-radius: 20% 20% 78% 78% / 20% 20% 48% 48% ;
+                border-radius: 10% 10% 20% 20% / 15% 15% 85% 85%;
+                border-top-left-radius: 90px;
+                border-top-right-radius: 90px;
                 bottom: -8px;
                 right: -8px;
                 z-index: -1;
             }
 
-            .btn.play {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                width: 70px;
-                height: 70px;
-                background-color: $secondaryColor;
-                border-radius: 50%;
-            }
-
-            // .img {
-            //     width: 100%;
-            //     background-image: url('img/backImg.png');
-            //     overflow: hidden;
+            // .frame {
+            //     position: relative;
+            //     background-image: url('img/vid.png');
+            //     max-width: 100%;
+            //     min-width: 90%;
+            //     // display: none;
+            //     // border-radius: 20% 20% 78% 78% / 20% 20% 48% 48% ;
+            //     // overflow: hidden;
+            //     &:hover {
+            //         filter: grayscale(.25);
+            //     }
+                
             // }
             
 
         }
+
 
     }
 }
