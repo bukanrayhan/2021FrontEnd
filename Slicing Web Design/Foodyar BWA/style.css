@@ -114,6 +114,7 @@ a {
   grid-auto-flow: column;
   gap: 100px;
   grid-auto-columns: minmax(auto, 424px) minmax(auto, 628px);
+  display: none;
 }
 
 .container .hero .txtBx {
@@ -283,5 +284,231 @@ a {
   bottom: -8px;
   right: -8px;
   z-index: -1;
+}
+
+.container .ber {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: minmax(400px, 1fr);
+      grid-template-rows: minmax(400px, 1fr);
+  position: relative;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  place-items: center;
+  grid-auto-flow: column;
+  gap: 100px;
+  -ms-grid-columns: minmax(auto, 424px) minmax(auto, 628px);
+      grid-template-columns: minmax(auto, 424px) minmax(auto, 628px);
+}
+
+.container .ber .txtBx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  place-self: center;
+}
+
+.container .ber .txtBx h1 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 2.8em;
+  line-height: 70px;
+}
+
+.container .ber .txtBx h1 span {
+  display: inline-block;
+  position: relative;
+}
+
+.container .ber .txtBx h1 span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  display: block;
+  bottom: 0.29em;
+  background-color: #FBE0DC;
+  height: 0.25em;
+  border-radius: 100px;
+  z-index: -1;
+  color: #272042;
+}
+
+.container .ber .txtBx p {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: #8B8BA5;
+  font-size: 1.25em;
+  line-height: 34px;
+}
+
+.container .ber .txtBx .btn {
+  position: relative;
+  color: #272042;
+  font-size: 1.1em;
+  background-color: #F7C531;
+  padding: .8em 2em;
+  border-radius: 1.7em 1.7em 15px 15px;
+  font-weight: 500;
+}
+
+.container .ber .vidBx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  place-self: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container .ber .vidBx .ihj {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  -o-object-position: center;
+     object-position: center;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+}
+
+.container .ber .vidBx .ihj .overlay {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: url("img/Rectangle 15.svg");
+          mask-image: url("img/Rectangle 15.svg");
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container .ber .vidBx .ihj .overlay .btn.play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 4px solid #FBE0DC;
+  border-radius: 50%;
+  top: calc(50% - 50px);
+  right: calc(50% - 36px);
+  cursor: pointer;
+  z-index: 1;
+  opacity: .6;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.container .ber .vidBx .ihj .overlay:hover, .container .ber .vidBx .ihj .overlay + .btn.play:hover {
+  background-color: rgba(0, 0, 0, 0.11);
+}
+
+.container .ber .vidBx .ihj .overlay:hover .btn.play, .container .ber .vidBx .ihj .overlay + .btn.play:hover .btn.play {
+  background-color: #FBE0DC;
+  opacity: 1;
+}
+
+.container .ber .vidBx .ihj .img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image: url("img/Rectangle 15.svg");
+  mask-image: url("img/Rectangle 15.svg");
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  cursor: pointer;
+}
+
+.container .ber .vidBx .ihj::before {
+  content: '';
+  position: absolute;
+  -webkit-mask-image: url("img/backImg.svg");
+          mask-image: url("img/backImg.svg");
+  background-color: #FDFAE5;
+  width: 100%;
+  height: 90%;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  z-index: -1;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: left;
+          mask-position: left;
+  top: 0px;
+  left: 0px;
+}
+
+.container .ber .vidBx .ihj::after {
+  content: '';
+  position: absolute;
+  -webkit-mask-image: url("img/backImg.svg");
+          mask-image: url("img/backImg.svg");
+  background-color: #D8CBF6;
+  width: 100%;
+  height: 90%;
+  -webkit-mask-position: right;
+          mask-position: right;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
