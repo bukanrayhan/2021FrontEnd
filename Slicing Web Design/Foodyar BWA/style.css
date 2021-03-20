@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Quicksand', Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 a {
@@ -72,7 +73,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2em;
+  gap: 2.9em;
 }
 
 .container .navbar .menu a {
@@ -80,8 +81,8 @@ a {
   position: relative;
 }
 
-.container .navbar .menu a.active::after {
-  content: "";
+.container .navbar .menu a.active::before {
+  content: '';
   position: absolute;
   width: 100%;
   display: block;
@@ -90,7 +91,9 @@ a {
   height: 0.25em;
   border-radius: 100px;
   z-index: -1;
-  color: #272042;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .container .navbar .menu .cta {
@@ -146,7 +149,7 @@ a {
 }
 
 .container .hero .txtBx h1 span::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   display: block;
@@ -155,7 +158,9 @@ a {
   height: 0.25em;
   border-radius: 100px;
   z-index: -1;
-  color: #272042;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .container .hero .txtBx p {
@@ -333,7 +338,7 @@ a {
 }
 
 .container .ber .txtBx h1 span::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   display: block;
@@ -342,7 +347,9 @@ a {
   height: 0.25em;
   border-radius: 100px;
   z-index: -1;
-  color: #272042;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .container .ber .txtBx p {
@@ -417,6 +424,8 @@ a {
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
 }
 
 .container .ber .vidBx .ihj .overlay .btn.play {
@@ -453,6 +462,8 @@ a {
 }
 
 .container .ber .vidBx .ihj .img {
+  background-image: url("img/vid.png");
+  display: block;
   position: relative;
   top: 0;
   left: 0;
@@ -472,43 +483,72 @@ a {
   -webkit-mask-position: center;
           mask-position: center;
   cursor: pointer;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  z-index: -999;
 }
 
-.container .ber .vidBx .ihj::before {
-  content: '';
-  position: absolute;
-  -webkit-mask-image: url("img/backImg.svg");
-          mask-image: url("img/backImg.svg");
-  background-color: #FDFAE5;
-  width: 100%;
-  height: 90%;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  z-index: -1;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: left;
-          mask-position: left;
-  top: 0px;
-  left: 0px;
+.container .rec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.container .ber .vidBx .ihj::after {
+.container .rec p {
+  font-size: 1.25em;
+  color: #8B8BA5;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.container .rec h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.container .rec .menu {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.9em;
+}
+
+.container .rec .menu li a {
+  display: block;
+  position: relative;
+  font-size: 1.25em;
+  color: #272042;
+}
+
+.container .rec .menu li a.active {
+  color: #F7C531;
+}
+
+.container .rec .menu li a.active.active::before {
   content: '';
   position: absolute;
-  -webkit-mask-image: url("img/backImg.svg");
-          mask-image: url("img/backImg.svg");
-  background-color: #D8CBF6;
-  width: 100%;
-  height: 90%;
-  -webkit-mask-position: right;
-          mask-position: right;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  bottom: 0px;
-  right: 0px;
+  width: 70%;
+  display: block;
+  bottom: -0.5em;
+  background-color: #F7C531;
+  height: 0.125em;
+  border-radius: 100px;
   z-index: -1;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */

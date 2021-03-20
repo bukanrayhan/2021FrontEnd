@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Quicksand', Helvetica, sans-serif;
+    overflow: hidden;
     // font-size: 18px;
 }
 
@@ -30,17 +31,27 @@ $quaternaryColor: #FDFAE5;
     // max-height: 50px;
 }
 
-@mixin textHighlight ($word: '', $height:.25em, $bottom: .1em){
-    content: $word;
+@mixin textHighlight ($height:.25em, $bottom: .1em, $color: $secondaryColor, $width:100%){
+    content: '';
     position: absolute;
-    width: 100%;
+    width: $width;
     display: block;
     bottom: $bottom;
-    background-color: $secondaryColor;
+    background-color: $color;
     height: $height;
     border-radius: 100px;
     z-index: -1;
-    color: $fontColor1;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+@mixin menu {
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    align-items: center;
+    gap: 2.9em;
 }
 
 // @mixin textHighlight ($word:'',$height:.5em){
@@ -99,14 +110,14 @@ a {
             grid-auto-flow: column;
             list-style: none;
             align-items: center;
-            gap: 2em;
+            gap: 2.9em;
 
             a{
                 display: block;
                 position: relative;
 
-                &.active::after {
-                    @include textHighlight('',.25em);
+                &.active::before {
+                    @include textHighlight();
                 }
             }
             
@@ -148,7 +159,7 @@ a {
                     position: relative;
 
                     &::before {
-                        @include textHighlight('', .25em, .29em);
+                        @include textHighlight(.25em, .29em);
                     }
                     
                 }
@@ -324,7 +335,7 @@ a {
                     position: relative;
 
                     &::before {
-                        @include textHighlight('', .25em, .29em);
+                        @include textHighlight(.25em, .29em);
                     }
                     
                 }
@@ -435,6 +446,7 @@ a {
                     background-position: center;
                     cursor: pointer;
                     transition: .5s;
+                    mask-size: 100% 100%;
                     // display: none;
 
                     .btn.play {
@@ -466,7 +478,13 @@ a {
                     }
                 }
 
+                // img.img {
+                //     display: none;
+                // }
+
                 .img {
+                    background-image: url('img/vid.png');
+                    display: block;
                     position: relative;
                     top: 0;
                     left: 0;
@@ -483,56 +501,60 @@ a {
                     -webkit-mask-repeat: no-repeat;
                     mask-position: center;
                     cursor: pointer;
-                    // z-index: -1;
+                    mask-size: 100% 100%;
+                    z-index: -999;
                     // display: none;
 
+                    
+                    
+                    
                 }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    mask-image: url('img/backImg.svg');
-                    background-color: $quaternaryColor;
-                    // z-index: 9;
-                    width: 100%;
-                    height: 90%;
-                    // mask-position: center;
-                    mask-size: contain;
-                    // background-color: $quaternaryColor;
-                    // border-radius: 10% 10% 20% 20% / 15% 15% 85% 85%;
-                    // border-top-left-radius: 90px;
-                    // border-top-right-radius: 90px;
-                    // top: -10px;
-                    // left: -12px;
-                    z-index: -1;
-                    mask-repeat: no-repeat;
-                    mask-position: left;
-                    top: 0px;
-                    left: 0px;
-                    // background-color: $quaternaryColor;
-                }
-                
-                &::after {
-                    content: '';
-                    position: absolute;
-                    mask-image: url('img/backImg.svg');
-                    background-color: $tertiaryColor;
-                    // z-index: 9;
-                    width: 100%;
-                    height: 90%;
-                    mask-position: right;
-                    mask-size: contain;
-                    // background-color: $quaternaryColor;
-                    // border-radius: 10% 10% 20% 20% / 15% 15% 85% 85%;
-                    // border-top-left-radius: 90px;
-                    // border-top-right-radius: 90px;
-                    bottom: 0px;
-                    right: 0px;
-                    z-index: -1;
-                    mask-repeat: no-repeat;
-                    // background-color: $quaternaryColor;
-                }
-
+                // &::before {
+                //     // content: url('img/frame1.svg');
+                //     position: absolute;
+                //     background-image: url('img/frame1.svg');
+                //     // mask-image: url('img/frame1.svg');
+                //     background-color: $quaternaryColor;
+                //     // z-index: 9;
+                //     width: 100%;
+                //     height: 100%;
+                //     // mask-position: center;
+                //     // mask-size: contain;
+                //     // background-color: $quaternaryColor;
+                //     // border-radius: 10% 10% 20% 20% / 15% 15% 85% 85%;
+                //     // border-top-left-radius: 90px;
+                //     // border-top-right-radius: 90px;
+                //     // top: -10px;
+                //     // left: -12px;
+                //     z-index: -1;
+                //     mask-repeat: no-repeat;
+                //     // mask-position: left;
+                //     mask-size: 100% 100%;
+                //     // top: 0;
+                //     // left: 0;
+                //     // background-color: $quaternaryColor;
+                // }
+                // &::after {
+                //     content: '';
+                //     position: absolute;
+                //     mask-image: url('img/frame2.svg');
+                //     background-color: $tertiaryColor;
+                //     // z-index: 9;
+                //     width: 100%;
+                //     height: 100%;
+                //     mask-position: right;
+                //     // mask-size: contain;
+                //     // background-color: $quaternaryColor;
+                //     // border-radius: 10% 10% 20% 20% / 15% 15% 85% 85%;
+                //     // border-top-left-radius: 90px;
+                //     // border-top-right-radius: 90px;
+                //     // bottom: 0px;
+                //     // right: 0px;
+                //     z-index: -1;
+                //     mask-repeat: no-repeat;
+                //     mask-size: 100% 100%;
+                //     // background-color: $quaternaryColor;
+                // }
             }
 
             // .frame {
@@ -658,4 +680,49 @@ a {
 
 
     }
+
+    .rec {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        place-self: center;
+        flex-direction: column;
+
+        p {
+            font-size: 1.25em;
+            color: $fontColor2;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .menu {
+            @include menu();
+
+            li {
+
+                a {
+                    display: block;
+                    position: relative;
+                    font-size: 1.25em;
+                    color: $fontColor1;
+                    
+                    &.active {
+                        color: $primaryColor;
+        
+                        &.active::before {
+                            @include textHighlight(.25em/2, -.5em, $primaryColor, 70%)
+                        }
+        
+                    }
+                }
+            }
+
+        }
+    }
+
 }
