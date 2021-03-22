@@ -767,15 +767,17 @@ a {
                             width: 270px;
                             height: 285px;
                             // overflow: hidden;
-                            border-radius: 68px 30px 78px 78px;
+                            
                             margin-bottom: 20px;
                             
-                            img.img {
+                            .img {
+                                position: relative;
                                 // display: none;
                                 position: relative;
                                 width: 100%;
-                                height: auto;
+                                height: 100%;
                                 object-fit: cover;
+                                border-radius: 68px 30px 78px 78px;
                                 // background-position: bottom;
         
                                 &.salad {
@@ -786,12 +788,15 @@ a {
 
                                     // style baru
                                     display: block;
+                                    background-image: url('img/salad.png');
+                                    background-position: center 82%;
                                     // background-image: url('img/salad.png');
-                                    overflow: hidden;
-                                    mask-image: url('img/rec-frame.svg');
-                                    mask-repeat: no-repeat;
-                                    mask-size: contain;
+                                    // overflow: hidden;
+                                    // mask-image: url('img/rec-frame.svg');
+                                    // mask-repeat: no-repeat;
+                                    // mask-size: contain;
                                     width: inherit;
+                                    // mask-position: center bottom;
                                     // background-position: 25% 50%;
                                 }
         
@@ -803,11 +808,12 @@ a {
                                     
                                     // style baru 
                                     display: block;
-                                    background-image: url('img/salad.png');
-                                    overflow: hidden;
-                                    mask-image: url('img/rec-frame.svg');
-                                    mask-repeat: no-repeat;
-                                    mask-size: contain;
+                                    background-image: url('img/Avocado.png');
+                                    background-position: 64% 78%;
+                                    // overflow: hidden;
+                                    // mask-image: url('img/rec-frame.svg');
+                                    // mask-repeat: no-repeat;
+                                    // mask-size: contain;
                                     width: inherit;
                                     // background-position: 25% 50%;
                                 }
@@ -820,11 +826,12 @@ a {
                                     
                                     // style baru
                                     display: block;
-                                    background-image: url('img/salad.png');
-                                    overflow: hidden;
-                                    mask-image: url('img/rec-frame.svg');
-                                    mask-repeat: no-repeat;
-                                    mask-size: contain;
+                                    background-image: url('img/Bayam.png');
+                                    background-position: 78% 82%;
+                                    // overflow: hidden;
+                                    // mask-image: url('img/rec-frame.svg');
+                                    // mask-repeat: no-repeat;
+                                    // mask-size: contain;
                                     width: inherit;
                                     // background-position: 25% 50%;
                                 }
@@ -838,11 +845,12 @@ a {
                                     // style baru
                                     background-size: 180%;
                                     display: block;
-                                    background-image: url('img/salad.png');
-                                    overflow: hidden;
-                                    mask-image: url('img/rec-frame.svg');
-                                    mask-repeat: no-repeat;
-                                    mask-size: contain;
+                                    background-image: url('img/Dragon-fruits.png');
+                                    background-position: 40% 20%;
+                                    // overflow: hidden;
+                                    // mask-image: url('img/rec-frame.svg');
+                                    // mask-repeat: no-repeat;
+                                    // mask-size: contain;
                                     width: inherit;
                                     // background-position: 25% 50%;
                                 }
@@ -850,16 +858,20 @@ a {
 
                             
                         &::before {
+                            // display: none;
                             content: '';
                             position: absolute;
                             width: 286px;
                             height: 300px;
                             background-color: $tertiaryColor;
                             z-index: -2;
-                            left: 0;
+                            left: 50%;
                             top: calc(-15px / 2);
-                            right: 0;
-                            margin: auto;
+                            // right: 0;
+                            // top: 0;
+                            // bottom: 0;
+                            // margin: 0 auto;
+                            transform: translateX(-50%);
                             border-radius: 30px 30px 78px 78px;
                         }
         
@@ -870,7 +882,7 @@ a {
                             height: 292px;
                             background-color: $quaternaryColor;
                             z-index: -1;
-                            left: 0;
+                            right: 0;
                             top: calc(-15px / 2);
                             margin: auto;
                             border-radius: 67px 30px 78px 76px;

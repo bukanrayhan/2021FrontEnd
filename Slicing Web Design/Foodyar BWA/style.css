@@ -578,67 +578,45 @@ a {
   position: relative;
   width: 270px;
   height: 285px;
-  border-radius: 68px 30px 78px 78px;
   margin-bottom: 20px;
 }
 
-.container .rec .tabs-content .content .rec-frame img.img {
+.container .rec .tabs-content .content .rec-frame .img {
+  position: relative;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 68px 30px 78px 78px;
 }
 
-.container .rec .tabs-content .content .rec-frame img.img.salad {
-  display: block;
-  overflow: hidden;
-  -webkit-mask-image: url("img/rec-frame.svg");
-          mask-image: url("img/rec-frame.svg");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  width: inherit;
-}
-
-.container .rec .tabs-content .content .rec-frame img.img.avoc {
+.container .rec .tabs-content .content .rec-frame .img.salad {
   display: block;
   background-image: url("img/salad.png");
-  overflow: hidden;
-  -webkit-mask-image: url("img/rec-frame.svg");
-          mask-image: url("img/rec-frame.svg");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  background-position: center 82%;
   width: inherit;
 }
 
-.container .rec .tabs-content .content .rec-frame img.img.bayam {
+.container .rec .tabs-content .content .rec-frame .img.avoc {
   display: block;
-  background-image: url("img/salad.png");
-  overflow: hidden;
-  -webkit-mask-image: url("img/rec-frame.svg");
-          mask-image: url("img/rec-frame.svg");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  background-image: url("img/Avocado.png");
+  background-position: 64% 78%;
   width: inherit;
 }
 
-.container .rec .tabs-content .content .rec-frame img.img.dragon {
+.container .rec .tabs-content .content .rec-frame .img.bayam {
+  display: block;
+  background-image: url("img/Bayam.png");
+  background-position: 78% 82%;
+  width: inherit;
+}
+
+.container .rec .tabs-content .content .rec-frame .img.dragon {
   background-size: 180%;
   display: block;
-  background-image: url("img/salad.png");
-  overflow: hidden;
-  -webkit-mask-image: url("img/rec-frame.svg");
-          mask-image: url("img/rec-frame.svg");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  background-image: url("img/Dragon-fruits.png");
+  background-position: 40% 20%;
   width: inherit;
 }
 
@@ -649,10 +627,10 @@ a {
   height: 300px;
   background-color: #D8CBF6;
   z-index: -2;
-  left: 0;
+  left: 50%;
   top: calc(-15px / 2);
-  right: 0;
-  margin: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   border-radius: 30px 30px 78px 78px;
 }
 
@@ -663,7 +641,7 @@ a {
   height: 292px;
   background-color: #FDFAE5;
   z-index: -1;
-  left: 0;
+  right: 0;
   top: calc(-15px / 2);
   margin: auto;
   border-radius: 67px 30px 78px 76px;
