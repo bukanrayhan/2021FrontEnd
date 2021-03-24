@@ -7,15 +7,16 @@
 }
 
 body {
-  font-family: 'Quicksand', Helvetica, sans-serif;
+  font-family: "Quicksand", Helvetica, sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: #8B8BA5;
+  color: #8b8ba5;
 }
 
-.active, .cta {
+.active,
+.cta {
   color: #272042;
   font-weight: 500;
 }
@@ -81,12 +82,12 @@ a {
 }
 
 .container .navbar .menu a.active::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   display: block;
   bottom: 0.1em;
-  background-color: #FBE0DC;
+  background-color: #fbe0dc;
   height: 0.25em;
   border-radius: 100px;
   z-index: -1;
@@ -99,8 +100,8 @@ a {
   position: relative;
   color: #272042;
   font-size: 1.1em;
-  background-color: #FBE0DC;
-  padding: .8em 2em;
+  background-color: #fbe0dc;
+  padding: 0.8em 2em;
   border-radius: 1.7em 1.7em 15px 15px;
   font-weight: 500;
 }
@@ -148,12 +149,12 @@ a {
 }
 
 .container .hero .txtBx h1 span::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   display: block;
   bottom: 0.29em;
-  background-color: #FBE0DC;
+  background-color: #fbe0dc;
   height: 0.25em;
   border-radius: 100px;
   z-index: -1;
@@ -165,7 +166,7 @@ a {
 .container .hero .txtBx p {
   display: inline-block;
   margin-bottom: 40px;
-  color: #8B8BA5;
+  color: #8b8ba5;
   font-size: 1.25em;
   line-height: 34px;
 }
@@ -174,8 +175,8 @@ a {
   position: relative;
   color: #272042;
   font-size: 1.1em;
-  background-color: #F7C531;
-  padding: .8em 2em;
+  background-color: #f7c531;
+  padding: 0.8em 2em;
   border-radius: 1.7em 1.7em 15px 15px;
   font-weight: 500;
 }
@@ -222,8 +223,8 @@ a {
   background-position: center;
   background-size: cover;
   cursor: pointer;
-  -webkit-transition: .25s;
-  transition: .25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .container .hero .vidBx .frame .btn.play {
@@ -239,34 +240,34 @@ a {
   position: absolute;
   width: 70px;
   height: 70px;
-  background-color: #FBE0DC;
-  border: 4px solid #FBE0DC;
+  background-color: #fbe0dc;
+  border: 4px solid #fbe0dc;
   border-radius: 50%;
   top: calc(50% - 50px);
   right: calc(50% - 36px);
   cursor: pointer;
   z-index: 2;
-  opacity: .6;
-  -webkit-transition: .25s;
-  transition: .25s;
+  opacity: 0.6;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .container .hero .vidBx .frame:hover .img {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .container .hero .vidBx .frame:hover .btn.play {
   opacity: 1;
-  background-color: #FBE0DC;
+  background-color: #fbe0dc;
 }
 
 .container .hero .vidBx::before {
   position: absolute;
-  content: '';
+  content: "";
   z-index: 2;
   width: inherit;
   height: 88%;
-  background-color: #FDFAE5;
+  background-color: #fdfae5;
   border-radius: 10% 10% 20% 20% / 15% 15% 85% 85%;
   border-top-left-radius: 90px;
   border-top-right-radius: 90px;
@@ -277,11 +278,11 @@ a {
 
 .container .hero .vidBx::after {
   position: absolute;
-  content: '';
+  content: "";
   z-index: 2;
   width: inherit;
   height: 88%;
-  background-color: #D8CBF6;
+  background-color: #d8cbf6;
   border-radius: 10% 10% 20% 20% / 15% 15% 85% 85%;
   border-top-left-radius: 90px;
   border-top-right-radius: 90px;
@@ -337,12 +338,12 @@ a {
 }
 
 .container .ber .txtBx h1 span::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   display: block;
   bottom: 0.29em;
-  background-color: #FBE0DC;
+  background-color: #fbe0dc;
   height: 0.25em;
   border-radius: 100px;
   z-index: -1;
@@ -354,7 +355,7 @@ a {
 .container .ber .txtBx p {
   display: inline-block;
   margin-bottom: 40px;
-  color: #8B8BA5;
+  color: #8b8ba5;
   font-size: 1.25em;
   line-height: 34px;
 }
@@ -363,8 +364,8 @@ a {
   position: relative;
   color: #272042;
   font-size: 1.1em;
-  background-color: #F7C531;
-  padding: .8em 2em;
+  background-color: #f7c531;
+  padding: 0.8em 2em;
   border-radius: 1.7em 1.7em 15px 15px;
   font-weight: 500;
 }
@@ -419,8 +420,8 @@ a {
           mask-position: center;
   background-position: center;
   cursor: pointer;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
@@ -438,23 +439,25 @@ a {
   position: absolute;
   width: 70px;
   height: 70px;
-  border: 4px solid #FBE0DC;
+  border: 4px solid #fbe0dc;
   border-radius: 50%;
   top: calc(50% - 50px);
   right: calc(50% - 36px);
   cursor: pointer;
   z-index: 1;
-  opacity: .6;
-  -webkit-transition: .25s;
-  transition: .25s;
+  opacity: 0.6;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
-.container .ber .vidBx .ihj .overlay:hover, .container .ber .vidBx .ihj .overlay + .btn.play:hover {
+.container .ber .vidBx .ihj .overlay:hover,
+.container .ber .vidBx .ihj .overlay + .btn.play:hover {
   background-color: rgba(0, 0, 0, 0.11);
 }
 
-.container .ber .vidBx .ihj .overlay:hover .btn.play, .container .ber .vidBx .ihj .overlay + .btn.play:hover .btn.play {
-  background-color: #FBE0DC;
+.container .ber .vidBx .ihj .overlay:hover .btn.play,
+.container .ber .vidBx .ihj .overlay + .btn.play:hover .btn.play {
+  background-color: #fbe0dc;
   opacity: 1;
 }
 
@@ -499,7 +502,7 @@ a {
 
 .container .rec p {
   font-size: 1.25em;
-  color: #8B8BA5;
+  color: #8b8ba5;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -531,16 +534,16 @@ a {
 }
 
 .container .rec .menu li a.active {
-  color: #F7C531;
+  color: #f7c531;
 }
 
 .container .rec .menu li a.active.active::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 70%;
   display: block;
   bottom: -0.5em;
-  background-color: #F7C531;
+  background-color: #f7c531;
   height: 0.125em;
   border-radius: 100px;
   z-index: -1;
@@ -555,6 +558,9 @@ a {
   display: grid;
   -ms-grid-columns: (minmax(286px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 200px;
   grid-gap: 30px;
 }
@@ -621,11 +627,11 @@ a {
 }
 
 .container .rec .tabs-content .content .rec-frame::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 286px;
   height: 300px;
-  background-color: #D8CBF6;
+  background-color: #d8cbf6;
   z-index: -2;
   left: 50%;
   top: calc(-15px / 2);
@@ -635,11 +641,11 @@ a {
 }
 
 .container .rec .tabs-content .content .rec-frame::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 278px;
   height: 292px;
-  background-color: #FDFAE5;
+  background-color: #fdfae5;
   z-index: -1;
   right: 0;
   top: calc(-15px / 2);
