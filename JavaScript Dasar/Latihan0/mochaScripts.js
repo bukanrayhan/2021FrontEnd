@@ -149,4 +149,40 @@ const lenObj = obj;
 console.table(obj);
 console.info(lenObj);
 
-console.log(obj.nama);
+console.log("");
+
+const person = `
+    Nama    :   ${obj.name}
+    Umur    :   ${obj.umur}
+    Kelas   :   ${obj.kelas}
+    Hobby   :   ${obj.hobby}
+    Alamat  :   ${obj.alamat}
+`;
+
+// Pengkondisian
+obj.umur = 15;
+
+console.log(person);
+
+if (27 <= obj.umur) {
+  console.log(`${obj.name} itu tuek`);
+} else if (18 <= obj.umur) {
+  console.log(`${obj.name} itu pemuda dewasa`);
+} else if (14 <= obj.umur) {
+  console.log(`${obj.name} itu remaja`);
+} else if (10 <= obj.umur) {
+  console.log(`${obj.name} itu anak menuju remaja`);
+} else if (5 <= obj.umur) {
+  console.log(`${obj.name} itu anak`);
+} else if (3 <= obj.umur) {
+  console.log(`${obj.name} itu balita`);
+} else {
+  console.log(`${obj.name} itu bayi`);
+}
+
+// nyoba function
+function myName(obj) {
+  console.log(obj.name);
+}
+
+myName(obj);
