@@ -87,3 +87,66 @@ Umur    : ${age}
 `;
 
 console.info(bio);
+
+// Parsing
+const x = "290";
+const y = 2;
+const j = 1.0;
+const q = "504Davie";
+const c = NaN;
+const v = undefined;
+
+const sum = Number(x) + y;
+
+console.info(j);
+console.info(parseInt(q));
+console.info(sum);
+
+console.info(v == "undefined");
+
+console.info("");
+
+// Array
+const arr = [];
+
+arr.push("hey");
+arr.push(0);
+arr.push("mamank");
+arr.push("Abah Gemink");
+arr.push("Agus Jubaedah");
+
+arr[1] = "lo";
+
+lenArr = arr.length;
+
+console.table(arr);
+console.info(lenArr);
+
+delete arr[0];
+
+console.table(arr);
+console.info(lenArr);
+
+// Object
+const obj = {};
+
+obj["name"] = nama;
+obj["kelas"] = kelas;
+obj["hobby"] = hobby;
+obj["alamat"] = alamat;
+obj["umur"] = age;
+
+console.table(obj);
+
+delete obj["alamat"];
+console.table(obj);
+
+obj["alamat"] = alamat;
+console.table(obj);
+
+const lenObj = obj;
+
+console.table(obj);
+console.info(lenObj);
+
+console.log(obj.nama);
