@@ -186,3 +186,9 @@ function myName(obj) {
 }
 
 myName(obj);
+
+function myHobby(obj) {
+  console.log(obj.hobby);
+}
+
+myHobby(obj);
