@@ -249,3 +249,13 @@ const nilai = 70;
 const ucapan = nilai >= 80 ? "Selamat anda lulus, dengan nilai A" : "Selamat anda lulus dengan nilai B";
 
 ucapan;
+
+// function with return value
+function tambah(a, b) {
+  let sum = a + b;
+  return sum;
+}
+
+let nilaii = tambah(5, 90);
+
+nilaii;
