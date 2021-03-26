@@ -234,7 +234,7 @@ function inOps(arr) {
     if (9 in arr) {
       console.log("boom"); // in Operator untuk men verif index / property saja, tidak untuk mencari value.
     } else {
-      console.log("what");
+      console.log("index ke 9 tidak ada.");
     }
   } else {
     console.log("what?");
@@ -242,3 +242,10 @@ function inOps(arr) {
 }
 
 inOps(arr);
+
+// Ternary Operator
+const nilai = 70;
+
+const ucapan = nilai >= 80 ? "Selamat anda lulus, dengan nilai A" : "Selamat anda lulus dengan nilai B";
+
+ucapan;
