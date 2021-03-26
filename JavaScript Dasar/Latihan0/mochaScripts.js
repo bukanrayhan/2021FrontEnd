@@ -192,3 +192,16 @@ function myHobby(obj) {
 }
 
 myHobby(obj);
+
+// nyoba slice and splice
+arr[0] = "niu";
+
+arr;
+
+we = arr.slice(-4, -1);
+
+we;
+
+we = arr.splice();
+
+we;
