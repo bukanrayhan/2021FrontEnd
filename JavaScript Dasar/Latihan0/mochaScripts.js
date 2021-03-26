@@ -214,3 +214,31 @@ let b = null;
 u; // undefined is special value from js, this variable is decralered but not defined->
 w; // Not a Number special is value from js ->
 b; // null is special value from js, null is assigned that means its empty ->
+
+// typeOf
+console.log(w, typeof w);
+console.log(u, typeof u);
+console.log(b, typeof b);
+console.log(arr, typeof arr);
+console.log(text, typeof text);
+
+// in Operator
+arr;
+arr.push(9);
+arr;
+
+function inOps(arr) {
+  if (3 in arr) {
+    console.log(`${arr[3]} is existed`);
+
+    if (9 in arr) {
+      console.log("boom"); // in Operator untuk men verif index / property saja, tidak untuk mencari value.
+    } else {
+      console.log("what");
+    }
+  } else {
+    console.log("what?");
+  }
+}
+
+inOps(arr);
