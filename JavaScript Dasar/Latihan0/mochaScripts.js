@@ -259,3 +259,10 @@ function tambah(a, b) {
 let nilaii = tambah(5, 90);
 
 nilaii;
+
+// OR (||) Operator
+let params = "het";
+
+console.log(params || "uy");
+
+console.log(undefined || 10);
