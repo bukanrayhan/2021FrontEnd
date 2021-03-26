@@ -205,3 +205,12 @@ we;
 we = arr.splice();
 
 we;
+
+// undefined null and NaN
+let u;
+let w = NaN;
+let b = null;
+
+u; // undefined is special value from js, this variable is decralered but not defined->
+w; // Not a Number special is value from js ->
+b; // null is special value from js, null is assigned that means its empty ->
