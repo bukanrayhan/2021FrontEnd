@@ -266,3 +266,10 @@ let params = "het";
 console.log(params || "uy");
 
 console.log(undefined || 10);
+
+// whlie
+let ulang = 1;
+while (ulang <= 10) {
+  console.log(`waw ke ${ulang}x`);
+  ulang++;
+}
