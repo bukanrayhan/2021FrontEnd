@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While</title>
+  </head>
+  <body>
+    <script>
+      alert("selamat datang");
+      let jmlAngkot;
+      let angkotBaik;
+      let noAngkot = 1;
+
+      jmlAngkot = prompt("Berapa jumlah angkot?");
+      angkotBaik = prompt("Berapa jumlah angkot yang baik?");
+
+      while (noAngkot <= angkotBaik) {
+        document.writeln(`<p>Angkot No.${noAngkot} beroperasi dengan baik </p>`);
+        noAngkot++;
+      }
+
+      for (noAngkot; noAngkot <= jmlAngkot; noAngkot++) {
+        document.writeln(`<p>Angkot No.${noAngkot} tidak beroperasi </p>`);
+      }
+
+      alert("terima kasih, babay");
+    </script>
+  </body>
+</html>
