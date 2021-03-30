@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suit Jawa</title>
+  </head>
+  <body>
+    <script>
+      // func
+      function suit() {
+        let p = prompt("pilih gajah, orang atau semut?");
+        let comp = Math.random();
+        let hasil;
+
+        if (comp < 0.34) {
+          comp = "gajah";
+        } else if (comp >= 34 && comp < 0.67) {
+          comp = "orang";
+        } else {
+          comp = "semut";
+        }
+
+        if (p == comp) {
+          hasil = "Seri!";
+        } else if (p === "gajah") {
+          hasil = comp === "orang" ? "Kamu Menang" : "Kamu Kalah";
+        } else if (p === "orang") {
+          hasil = comp === "gajah" ? "Kamu Kalah" : "Kamu Menang";
+        } else if (p === "semut") {
+          hasil = comp === "gajah" ? "Kamu Menang" : "Kamu Kalah";
+        } else {
+          hasil = "Pilihan yang kamu masukan salah!";
+        }
+
+        alert(`Kamu: ${p} vs Comp: ${comp}\n\n${hasil}`);
+      }
+
+      // suit Game
+      function suitGame() {
+        let main = true;
+        while (main) {
+          suit();
+
+          main = confirm("Main lagi?");
+        }
+
+        alert("Terima kasih sudah bermain.");
+      }
+
+      suitGame();
+    </script>
+  </body>
+</html>
