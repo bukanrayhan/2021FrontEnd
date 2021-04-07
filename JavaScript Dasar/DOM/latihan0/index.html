@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan DOM</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        max-width: 900px;
+        margin: 20px auto;
+        gap: 1.4em;
+      }
+
+      .container .addTodo {
+        font-size: 1em;
+        padding: 0.5em 1.5em;
+        border-radius: 0.5em;
+        box-shadow: none;
+        /* border: 1px solid rgba(0, 0, 0, 0.25); */
+      }
+
+      .container .todos {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        border: 1px solid #dedede;
+        min-width: 400px;
+        height: auto;
+        max-height: 420px;
+        overflow-y: auto;
+        /* min-height: 420px; */
+        border-radius: 0.5em;
+        padding: 0.5rem;
+        gap: 0.5rem;
+      }
+
+      .container .todos .todo {
+        background-color: #e7e7e7;
+        font-size: 1.2em;
+        padding: 0.8em 1em;
+        border-radius: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Todo List</h1>
+      <button class="addTodo">➕</button>
+      <ul class="todos">
+        <!-- <li class="todo">Belajar Han!!</li>
+        <li class="todo">Belajar Han!!</li> -->
+      </ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
