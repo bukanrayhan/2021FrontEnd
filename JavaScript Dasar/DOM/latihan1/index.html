@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan DOM | Random Color & Color Slider</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+      }
+
+      .container {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        max-width: 900px;
+        margin: 20px auto;
+        gap: 1.4em;
+      }
+
+      .container .btnColor {
+        font-size: 1em;
+        background-color: wheat;
+        padding: 0.5em 1.5em;
+        border-radius: 0.5em;
+        box-shadow: none;
+        /* border: 1px solid rgba(0, 0, 0, 0.25); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Todo List</h1>
+      <button class="btnColor">🎨</button>
+      <input type="range" name="r" min="0" max="255" />
+      <input type="range" name="g" min="0" max="255" />
+      <input type="range" name="b" min="0" max="255" />
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
