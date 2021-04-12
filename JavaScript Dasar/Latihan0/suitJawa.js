@@ -52,5 +52,6 @@ function suitGame() {
 
 suitGame();
 
-console.log(match);
+console.table(typeof match);
+console.table(match);
 // console.log(JSON.stringify(match));
