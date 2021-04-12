@@ -6,7 +6,7 @@ const jsVideos = videos.filter((vid) => vid.textContent.includes("Javascript"));
 
 // ambil Duration
 let jsDuration = jsVideos
-  .map((attDur) => attDur.getAttribute("duration"))
+  .map((item) => item.dataset.duration)
 
   // ubah durasi menjadi number, ubah menit menjadi detik
   .map((waktu) => {
