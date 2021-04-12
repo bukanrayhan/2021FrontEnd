@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let init = function () {
+      //     let nama = "yayan";
+      //     let tampilNama = function () {
+      //       console.log(nama);
+      //     };
+
+      //     return tampilNama;
+      //   };
+
+      //   let show = init();
+      //   show();
+
+      // arrow function
+      //   const tampilNama = nama => `Hai ${nama}`;
+      //   console.log(tampilNama("iwan"));
+
+      let jumlahNama = (arry) => arry.map((e) => ({ e, jmlE: e.length }));
+      let mhs = ["wawan", "ucok", "asep"];
+
+      mhs.push("jajang");
+
+      console.log(mhs);
+      console.log(jumlahNama(mhs));
+    </script>
+  </body>
+</html>
