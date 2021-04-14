@@ -37,7 +37,7 @@ fetch("http://127.0.0.1:5500/Javascript%20Lanjutan/Belajar%20Fetch/simple%20todo
       // create component
       todo += `<li class='todo'>
       <span class='text'>${element.title}</span>
-      <span class='delTodo'>✖</span>
+      <button class='delTodo'>✖</button>
       </li>`;
     });
     ulTodos.innerHTML = todo;
@@ -55,7 +55,7 @@ let addTodo = function () {
     const todo = document.createElement("li");
     todo.classList.add("todo");
     todo.innerHTML = `<span class='text'>${inputBx.value}</span>
-    <span class='delTodo'>✖</span>`;
+    <button class='delTodo'>✖</button>`;
 
     ulTodos.appendChild(todo);
   } else {

@@ -75,7 +75,7 @@
 
       .todo {
         position: relative;
-        background-color: #e7e7e7;
+        background-color: #f0f0f0;
         font-size: 1.2em;
         padding: 0.8em 1em;
         border-radius: 0.5em;
@@ -86,6 +86,10 @@
 
       .todo .delTodo {
         cursor: pointer;
+        background-color: unset;
+        width: unset;
+        border: unset;
+        font-size: 1em;
       }
     </style>
   </head>
@@ -96,10 +100,7 @@
         <div class="addBtn">add</div>
       </div>
 
-      <ul class="todos">
-        <!-- <li class="todo"><span class="text">Belajar Han!!</span> <span class="delTodo">✖</span></li>
-        <li class="todo"><span class="text">Belajar Han!!</span> <span class="delTodo">✖</span></li> -->
-      </ul>
+      <ul class="todos"></ul>
     </div>
     <script src="app.js"></script>
   </body>
