@@ -25,7 +25,7 @@ const ulTodos = document.querySelector(".todos");
 const addBtn = document.querySelector(".addBtn");
 
 // fetch data todos
-fetch("http://127.0.0.1:5500/Javascript%20Lanjutan/Belajar%20Fetch/Latihan0/todos.json")
+fetch("http://127.0.0.1:5500/Javascript%20Lanjutan/Belajar%20Fetch/simple%20todo%20app%20using%20fetch%20api/todos.json")
   .then((response) => response.text())
   .then((data) => {
     let todo = "";
