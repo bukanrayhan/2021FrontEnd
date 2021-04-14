@@ -1,10 +1,11 @@
 // Class Construtor
 class Todos {
   // constructor
-  constructor(title) {
+  constructor({ title, status = true }) {
     this._id = Todos.incrementId();
     this.title = title;
     this.created = Date();
+    this.status = status;
   }
 
   // autoIncrement Id
@@ -31,30 +32,34 @@ fetch("http://127.0.0.1:5500/Javascript%20Lanjutan/Belajar%20Fetch/simple%20todo
     let todo = "";
     JSON.parse(data).forEach((element) => {
       // parsing data api to local Object
-      const obj = new Todos(element.title);
+      const obj = new Todos(element);
       objTodos.push(obj);
 
       // create component
-      todo += `<li class='todo'>
+      todo += `<li class='todo ${obj.status}' data-key='${obj._id}'>
       <span class='text'>${element.title}</span>
       <button class='delTodo'>✖</button>
       </li>`;
     });
+
+    // rendering todo
     ulTodos.innerHTML = todo;
   });
 
 // declaration function
 
 // addTodo
-let addTodo = function () {
-  if (inputBx.value) {
+let addTodo = function (e) {
+  if (e.value) {
     // creating new object
-    objTodos.push(new Todos(inputBx.value));
+    const obj = new Todos({ title: e.value });
+    objTodos.push(obj);
 
     // create element
     const todo = document.createElement("li");
-    todo.classList.add("todo");
-    todo.innerHTML = `<span class='text'>${inputBx.value}</span>
+    todo.setAttribute("data-key", obj._id);
+    todo.setAttribute("class", `todo ${obj.status}`);
+    todo.innerHTML = `<span class='text'>${obj.title}</span>
     <button class='delTodo'>✖</button>`;
 
     ulTodos.appendChild(todo);
@@ -64,27 +69,33 @@ let addTodo = function () {
 };
 
 // delete Todo
-let delTodo = function (e) {
-  e.parentElement.style.display = "none";
+let delTodo = function (todo) {
+  objTodos.forEach((e) => {
+    if (e._id == todo.parentElement.dataset.key) {
+      const target = objTodos.indexOf(e);
+      // console.log(target);
+      // objTodos.pop(target);
+      objTodos.splice(target, 1);
+    }
+  });
+
+  todo.parentElement.style.display = "none";
 };
 
-// workflow
+// workflow from container
 container.addEventListener("click", function (e) {
-  // input
-  if (e.target.id == "inputBx") {
-    e.target.addEventListener("keypress", function (e) {
-      if (e.key == "Enter") {
-        addTodo();
-      }
-      e.stopPropagation();
-    });
-
-    // btn
-  } else if (e.target.className == "addBtn") {
-    addTodo();
+  if (e.target.className == "addBtn") {
+    addTodo(inputBx);
 
     // delete todo
   } else if (e.target.className == "delTodo") {
     delTodo(e.target);
+  }
+});
+
+// workflow input form
+inputBx.addEventListener("keyup", (e) => {
+  if (e.key == "Enter") {
+    addTodo(inputBx);
   }
 });

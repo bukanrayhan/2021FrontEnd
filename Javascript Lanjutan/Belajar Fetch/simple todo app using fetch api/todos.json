@@ -2,26 +2,31 @@
   {
     "id": 1,
     "title": "Belajar Han!!",
-    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)"
+    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)",
+    "status": true
   },
   {
     "id": 2,
     "title": "Buat design ui",
-    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)"
+    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)",
+    "status": false
   },
   {
     "id": 3,
     "title": "Belajar React",
-    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)"
+    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)",
+    "status": true
   },
   {
     "id": 4,
     "title": "Kasih makan kucing",
-    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)"
+    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)",
+    "status": false
   },
   {
     "id": 5,
     "title": "Sumbit course BWA",
-    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)"
+    "created": "Wed Apr 14 2021 07:32:10 GMT+0700 (Western Indonesia Time)",
+    "status": true
   }
 ]
