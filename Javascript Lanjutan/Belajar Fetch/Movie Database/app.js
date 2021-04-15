@@ -5,8 +5,10 @@ const inputSearch = document.querySelector(".input-search")
 const btnSearch = document.querySelector(".btn-search")
 const closeBtnDetail = document.querySelector("button.btn.btn-secondary")
 const closeBgDetail = document.querySelector(".modal.fade")
+const inputSection = document.querySelector(".input-section")
 
-// function declaration
+const div = document.createElement("div")
+
 // showMovies Function
 const showMovies = (m) => {
 	return `<div class="col-md-4 my-5">
@@ -45,11 +47,37 @@ const showDetails = (m) => {
   </div>`
 }
 
+// alertFucntion
+const showAlert = (res) => {
+	// error handle
+	let x = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`
+	div.classList.add(
+		"col-md-8",
+		"alert",
+		"alert-warning",
+		"alert-dismissible",
+		"fade",
+		"show",
+		"mt-3"
+	)
+	div.innerHTML = `${res.Error}<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`
+	inputSection.appendChild(div)
+}
+
 // rendering data from api
 const renderAPI = (input) => {
 	fetch(`http://www.omdbapi.com/?apikey=41eec44f&s=${input.value}`)
 		// success
 		.then((response) => response.json())
+		.then((res) => {
+			if (res.Response != "True") {
+				return Promise.reject(res)
+			}
+			return res
+		})
 		.then((data) => {
 			const movies = data.Search
 
@@ -94,18 +122,26 @@ const renderAPI = (input) => {
 						})
 				})
 			})
+
+			if (inputSection.childElementCount == 2) {
+				inputSection.lastChild.classList.remove("show")
+				setTimeout(() => {
+					inputSection.lastChild.style.display = "none"
+				}, 350)
+			}
 		})
 		.catch((error) => {
-			console.error("Erorr:", error)
+			showAlert(error)
+			// console.error(error.Error)
 		})
 }
+
+// showAlert({ Error: "hoho" })
 
 // checking the input search in not empty
 if (inputSearch.value != "") {
 	renderAPI(inputSearch)
 }
-
-// realtime search
 
 // from input search
 inputSearch.addEventListener("keyup", function (e) {
