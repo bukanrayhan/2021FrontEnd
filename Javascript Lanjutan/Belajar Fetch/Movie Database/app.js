@@ -12,12 +12,12 @@ const div = document.createElement("div")
 // showMovies Function
 const showMovies = (m) => {
 	return `<div class="col-md-4 my-5">
-  <div class="card">
-    <img src="${m.Poster}" class="card-img-top">
+  <div class="card" >
+    <img src="${m.Poster}" class="card-img-top detail" data-imdbid="${m.imdbID}" data-bs-toggle="modal" data-bs-target="#movieDetailModal">
     <div class="card-body">
-      <h5 class="card-title">${m.Title}</h5>
+      <h5 class="card-title detail underline" data-imdbid="${m.imdbID}" data-bs-toggle="modal" data-bs-target="#movieDetailModal">${m.Title}</h5>
       <p class="card-subtitle mb-2 text-muted">${m.Year}</p>
-      <a href="#" class="btn btn-primary btn-detail" data-bs-toggle="modal" data-imdbid="${m.imdbID}"
+      <a href="#" class="btn btn-primary detail" data-bs-toggle="modal" data-imdbid="${m.imdbID}"
       data-bs-target="#movieDetailModal">Show Detail</a>
     </div>
   </div>
@@ -63,87 +63,114 @@ const showAlert = (res) => {
 		"show",
 		"mt-3"
 	)
-	div.innerHTML = `${res.Error}<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`
+	div.innerHTML = `${res}<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`
 	inputSection.appendChild(div)
 }
 
-// rendering data from api
-const renderAPI = (input) => {
-	fetch(`http://www.omdbapi.com/?apikey=41eec44f&s=${input.value}`)
-		// success
-		.then((response) => response.json())
-		.then((res) => {
-			if (res.Response != "True") {
-				return Promise.reject(res)
-			}
-			return res
-		})
-		.then((data) => {
-			const movies = data.Search
+// renderAPI Function
+const renderAPI = async (input) => {
+	const movies = await getMovies(input.value)
+	
+	if (movies) renderUIMovies(movies)
 
-			let card = ""
-			movies.forEach((m) => {
-				card += showMovies(m)
-			})
+}
 
-			// insert data movies from api
-			movieContainer.innerHTML = card
+// render UI Movies
+const renderUIMovies = (movies) => {
+	let card = ""
+	movies.forEach((m) => {
+		card += showMovies(m)
+	})
+	// update UI movies
+	movieContainer.innerHTML = card
+}
 
-			// event untuk tombol detail
-			const btnList = document.querySelectorAll(".btn.btn-primary.btn-detail")
-			btnList.forEach((btn) => {
-				btn.addEventListener("click", function () {
-					// get movie id
-					const imdbID = this.dataset.imdbid
+// render UI detail
+const renderUIDetail = (m) => {
+	// create component
+	let detail = showDetails(m)
 
-					// fetch movie id
-					fetch(`http://www.omdbapi.com/?apikey=41eec44f&i=${imdbID}`)
-						.then((r) => r.json())
-						.then((m) => {
-							// create component
-							let detail = showDetails(m)
+	// append component detail
+	detailContainer.innerHTML = detail
+}
 
-							// append component detail
-							detailContainer.innerHTML = detail
+// fetch detail movie
+const getDetailMovie = (target) => {
+	return fetch(`http://www.omdbapi.com/?apikey=41eec44f&i=${target}`)
+		.then((r) => r.json())
+		.then((m) => {
 
-							// close detail
-							closeBtnDetail.addEventListener("click", (e) => {
-								setTimeout(() => {
-									detailContainer.innerHTML = ""
-								}, 250)
-								e.stopPropagation()
-							})
-							closeBgDetail.addEventListener("click", (e) => {
-								setTimeout(() => {
-									detailContainer.innerHTML = ""
-								}, 250)
-								e.stopPropagation
-							})
-						})
-				})
-			})
-
-			if (inputSection.childElementCount == 2) {
-				inputSection.lastChild.classList.remove("show")
-				setTimeout(() => {
-					inputSection.lastChild.style.display = "none"
-				}, 350)
-			}
-		})
-		.catch((error) => {
-			showAlert(error)
-			// console.error(error.Error)
+			return m
 		})
 }
 
-// showAlert({ Error: "hoho" })
+// fetch movies
+const getMovies = (target) => {
+	return fetch(`http://www.omdbapi.com/?apikey=41eec44f&s=${target}`)
+	.then((response) => {
+		if (!response.ok) {
+			console.error(response.status, response.statusText);
+			// console.log(Promise.reject(response));
+			return Promise.reject(response)
+		}
+		return response.json()
+	})
+	.then((res) => {
+		if (res.Response != "True") {
+			return Promise.reject(res)
+		}
+		return res
+	})
+	.then((data) => {
+		if (inputSection.childElementCount == 2) {
+			inputSection.lastChild.classList.remove("show")
+			setTimeout(() => {
+				inputSection.lastChild.style.display = "none"
+			}, 350)
+		}
+		
+		return data.Search
+	})
+	.catch((err) => {
+		if (err.Error) {
+			showAlert(err.Error)
+		} else {
+			showAlert(`Error ${err.status} ${err.statusText}`)
+		}
+		// console.error(error.Error)
+	})
+}
 
 // checking the input search in not empty
 if (inputSearch.value != "") {
 	renderAPI(inputSearch)
 }
 
-// from input search
+// event button detail
+movieContainer.addEventListener('click', async function(e) {
+	if (e.target.classList.contains('detail')) {
+		const detailMovie = await getDetailMovie(e.target.dataset.imdbid)
+		renderUIDetail(detailMovie)
+	}
+
+	// close detail
+	closeBtnDetail.addEventListener("click", (e) => {
+		setTimeout(() => {
+			detailContainer.innerHTML = ""
+		}, 250)
+		e.stopPropagation()
+	})
+	closeBgDetail.addEventListener("click", (e) => {
+		setTimeout(() => {
+			detailContainer.innerHTML = ""
+		}, 250)
+		e.stopPropagation
+	})
+
+	e.stopImmediatePropagation()
+})
+
+// event input search
 inputSearch.addEventListener("keyup", function (e) {
 	// checking keyup == 'Enter
 	if (e.key == "Enter") {
@@ -153,9 +180,9 @@ inputSearch.addEventListener("keyup", function (e) {
 	e.stopPropagation()
 })
 
-// from button search
+// event button search
 btnSearch.addEventListener("click", (e) => {
 	renderAPI(inputSearch)
 
-	e.stopPropagation
+	e.stopPropagation()
 })
