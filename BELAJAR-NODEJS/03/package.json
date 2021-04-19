@@ -2,5 +2,8 @@
 	"scripts": {
 		"start": "node ."
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"validator": "^13.5.2"
+	}
 }
